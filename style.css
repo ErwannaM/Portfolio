@@ -49,8 +49,9 @@ header {
     width: 100%;
     background: var(--white);
     z-index: 1000;
-    padding: 15px 0;
+    padding: 10px 0;
     border-bottom: 1px solid var(--border);
+    transition: var(--transition);
 }
 
 nav {
@@ -60,19 +61,47 @@ nav {
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     text-decoration: none;
     color: var(--text-navy);
+    white-space: nowrap;
 }
 
 .logo span {
     color: var(--accent-blue);
+    display: none;
+}
+
+@media (min-width: 480px) {
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .logo span {
+        display: inline;
+    }
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     list-style: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-navy);
+    border-radius: 2px;
+    transition: var(--transition);
 }
 
 .nav-links a {
@@ -114,9 +143,23 @@ nav {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 60px;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
     align-items: center;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .badge {
@@ -139,6 +182,7 @@ nav {
 .hero-title span {
     background: linear-gradient(90deg, #5a67d8, #06b6d4);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -146,7 +190,7 @@ nav {
     font-size: 1.15rem;
     color: var(--text-light);
     margin-bottom: 40px;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .hero-btns {
@@ -263,18 +307,21 @@ nav {
 }
 
 .skill-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
 .skill-card {
+    flex: 1 1 280px;
+    max-width: 300px;
     background: var(--white);
     border: 1px solid var(--border);
     padding: 24px;
     border-radius: 16px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
 }
 
@@ -287,11 +334,20 @@ nav {
     align-items: center;
     justify-content: center;
     color: var(--accent-blue);
+    flex-shrink: 0;
 }
 
 .skill-info h4 {
     font-size: 0.95rem;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.skill-desc {
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+    line-height: 1.4;
 }
 
 .skill-info span {
@@ -301,11 +357,17 @@ nav {
     font-weight: 600;
 }
 
-/* Footer */
-footer {
+.footer {
     background: var(--bg-dark);
     padding: 100px 0 50px;
     color: var(--white);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -349,18 +411,20 @@ footer {
     transform: translateY(0);
 }
 
+/* Responsive */
 @media (max-width: 1024px) {
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 40px;
     }
 
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     .hero-desc {
-        margin: 0 auto 40px;
+        margin: 0 auto 30px;
     }
 
     .hero-btns {
@@ -371,7 +435,86 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .skill-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    .chart-widget {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+        gap: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .header-contacts {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .section-head h2 {
+        font-size: 2rem;
+    }
+
+    .card-img {
+        height: 200px;
+    }
+
+    .footer-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .chart-widget {
+        padding: 15px;
+    }
+
+    .chart-widget text {
+        font-size: 8px;
     }
 }
