@@ -143,11 +143,16 @@ nav {
 
 .hero-grid {
     display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 40px;
-    width: 100%;
+    max-width: 900px;
 }
 
 
@@ -162,10 +167,19 @@ nav {
     border-radius: 12px;
     font-weight: 700;
     font-size: 0.95rem;
-    margin-bottom: 25px;
+    margin-bottom: 0;
     box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
     border: 2px solid rgba(255, 255, 255, 0.3);
     animation: noticeGlow 2s infinite alternate;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
 @keyframes noticeGlow {
@@ -212,7 +226,7 @@ nav {
     font-size: 0.75rem;
     font-weight: 600;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .hero-title {
@@ -459,9 +473,7 @@ nav {
 /* Responsive */
 @media (max-width: 1024px) {
     .hero-grid {
-        grid-template-columns: 1fr;
         text-align: center;
-        gap: 40px;
     }
 
     .hero-title {
