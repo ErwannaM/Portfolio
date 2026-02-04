@@ -286,7 +286,6 @@ nav {
 
 .chart-title {
     font-size: 0.8rem;
-    text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text-light);
     margin-bottom: 25px;
@@ -369,7 +368,6 @@ nav {
     border-radius: 6px;
     font-size: 0.7rem;
     font-weight: 700;
-    text-transform: uppercase;
 }
 
 .skill-grid {
@@ -419,7 +417,6 @@ nav {
 .skill-info span {
     font-size: 0.7rem;
     color: var(--text-light);
-    text-transform: uppercase;
     font-weight: 600;
 }
 
