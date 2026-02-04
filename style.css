@@ -340,6 +340,47 @@ nav {
     font-weight: 700;
 }
 
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-card-primary {
+    background: var(--accent-blue);
+    color: var(--white);
+    border: 1px solid var(--accent-blue);
+}
+
+.btn-card-primary:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+.btn-card-secondary {
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.btn-card-secondary:hover {
+    background: #dcfce7;
+    transform: translateY(-2px);
+}
+
 .skill-grid {
     display: flex;
     flex-wrap: wrap;
