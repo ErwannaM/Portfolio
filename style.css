@@ -276,13 +276,37 @@ nav {
 }
 
 .about-grid {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
     text-align: left;
 }
 
+.about-content {
+    flex: 1;
+}
+
+.about-portrait {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 4px solid var(--white);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+}
+
+.about-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .about-text {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .about-text p {
@@ -332,6 +356,19 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-portrait {
+        margin-top: 0;
+        width: 180px;
+        height: 180px;
+    }
+
     .about-highlights {
         grid-template-columns: 1fr;
     }
