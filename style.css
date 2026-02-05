@@ -394,12 +394,14 @@ nav {
 }
 
 .info-section h4 {
-    font-size: 0.9rem;
-    color: var(--text-navy);
+    font-size: 0.8rem;
+    color: #475569;
     margin-bottom: 8px;
     display: flex;
     align-items: center;
     gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .info-section ul {
@@ -408,8 +410,8 @@ nav {
 }
 
 .info-section li {
-    font-size: 0.85rem;
-    color: var(--text-gray);
+    font-size: 0.75rem;
+    color: #64748b;
     position: relative;
     padding-left: 18px;
     margin-bottom: 4px;
