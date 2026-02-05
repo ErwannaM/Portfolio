@@ -340,9 +340,9 @@ nav {
         0 15px 30px rgba(0, 0, 0, 0.1),
         inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     position: relative;
-    max-width: 90%;
+    max-width: 92%;
     max-height: 90%;
-    aspect-ratio: 16/11;
+    aspect-ratio: 1.67 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,7 +363,7 @@ nav {
     border-radius: 10px;
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
     background: white;
 }
 
