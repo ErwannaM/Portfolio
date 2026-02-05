@@ -278,7 +278,7 @@ nav {
 .about-grid {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .about-text {
