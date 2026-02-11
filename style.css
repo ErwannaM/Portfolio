@@ -584,6 +584,15 @@ nav {
     transform: translateY(-2px);
 }
 
+.btn-card-progress {
+    background: #fff7ed;
+    color: #9a3412;
+    border: 1px solid #ffedd5;
+    border-style: dashed;
+    cursor: default;
+    opacity: 0.9;
+}
+
 .skill-grid {
     display: flex;
     flex-wrap: wrap;
