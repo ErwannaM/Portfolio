@@ -585,13 +585,11 @@ nav {
 }
 
 .btn-card-progress {
-    background: #fed7aa;
-    /* Orange clair */
-    color: #7c2d12;
-    /* Orange très foncé */
-    border: 1px solid #f97316;
-    /* Orange vif */
-    border-style: dashed;
+    background: #fff7ed;
+    color: #ea580c;
+    border: 2px solid #ea580c;
+    border-style: solid;
+    font-weight: 700;
     cursor: default;
 }
 
